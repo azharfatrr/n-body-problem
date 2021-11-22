@@ -4,7 +4,10 @@
         "node": true
     },
     "extends": [
-        "airbnb-base"
+        "airbnb-base",
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -12,10 +15,9 @@
         "sourceType": "module"
     },
     "plugins": [
-        "@typescript-eslint",
-        "jest"
+        "@typescript-eslint"
     ],
-    "ignorePatterns": ["./dist/*.js"],
+    "ignorePatterns": ["dist/"],
     "rules": {
         "no-shadow": "off",
         "indent": "off",
