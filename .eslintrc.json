@@ -6,8 +6,8 @@
     "extends": [
         "airbnb-base",
         "eslint:recommended",
-        "plugin:@typescript-eslint/eslint-recommended",
-        "plugin:@typescript-eslint/recommended"
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/eslint-recommended"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -19,13 +19,8 @@
     ],
     "ignorePatterns": ["dist/"],
     "rules": {
-        "no-shadow": "off",
-        "indent": "off",
-        "@typescript-eslint/indent": ["error", 2],
+        "no-console": "off",
         "import/prefer-default-export": "off",
-        "import/no-extraneous-dependencies": [
-            "error", {"devDependencies": ["**/*.test.js", "**/*.spec.js"]}
-        ],
         "import/extensions": [
             "error",
             "always",

@@ -7,7 +7,7 @@ import Vector from './Vector';
 /**
  * Vector is a class models that represents a 2D vector.
  */
-export class Vector2D implements Vector {
+class Vector2D implements Vector {
   // --- ATTRIBUTES ---
 
   public i: number; // i component of the vector
@@ -112,3 +112,5 @@ export class Vector2D implements Vector {
     return v1.i * v2.i + v1.j * v2.j;
   }
 }
+
+export default Vector2D;
