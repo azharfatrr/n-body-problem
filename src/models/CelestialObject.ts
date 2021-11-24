@@ -3,9 +3,9 @@ import Position from './Position';
 import Velocity from './Velocity';
 
 /**
- * Object is a class that represents an object in the simulation.
+ * CelestialObject is a class that represents an object in the simulation.
  */
-class Object {
+class CelestialObject {
   // --- ATTRIBUTES ---
 
   public position: Position; // position of the object
@@ -25,6 +25,8 @@ class Object {
     this.velocity = velocity;
     this.mass = mass;
   }
+
+  // --- METHODS ---
 }
 
-export default Object;
+export default CelestialObject;

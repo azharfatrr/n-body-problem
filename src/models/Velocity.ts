@@ -15,7 +15,7 @@ export class Velocity extends Vector {
    * @param t time between the two positions.
    * @returns the velocity of the object.
    */
-  public static calculate(p1: Position, p2: Position, t: number): Velocity {
+  public static average(p1: Position, p2: Position, t: number): Velocity {
     const i = (p2.i - p1.i) / t;
     const j = (p2.j - p1.j) / t;
     return new Velocity(i, j);
@@ -26,7 +26,7 @@ export class Velocity extends Vector {
    * @param a acceleration to be added to the current velocity.
    * @param t time after which the acceleration is applied.
    */
-  public change(a: Acceleration, t: number): void {
+  public newTime(a: Acceleration, t: number): void {
     this.i += a.i * t;
     this.j += a.j * t;
   }

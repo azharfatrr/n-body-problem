@@ -15,7 +15,7 @@ class Acceleration extends Vector {
    * @param t time between the two positions.
    * @returns the acceleration of the object.
    */
-  public static calculate(v1: Velocity, v2: Velocity, t: number): Acceleration {
+  public static average(v1: Velocity, v2: Velocity, t: number): Acceleration {
     const i = (v2.i - v1.i) / t;
     const j = (v2.j - v1.j) / t;
     return new Acceleration(i, j);
