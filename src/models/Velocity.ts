@@ -25,10 +25,12 @@ export class Velocity extends Vector {
    * Change the current velocity by the acceleration.
    * @param a acceleration to be added to the current velocity.
    * @param t time after which the acceleration is applied.
+   * @returns the new current velocity.
    */
-  public newTime(a: Acceleration, t: number): void {
+  public after(a: Acceleration, t: number): Velocity {
     this.i += a.i * t;
     this.j += a.j * t;
+    return this;
   }
 
   /**

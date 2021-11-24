@@ -43,10 +43,12 @@ class Position extends Vector {
    * @param v velocity of the object.
    * @param a acceleration of the object.
    * @param t time after which the position is calculated.
+   * @returns the position of the object after a given time.
    */
-  public afterTime(v: Velocity, a: Acceleration, t: number): void {
+  public after(v: Velocity, a: Acceleration, t: number): Position {
     const totalDisplacement = Position.add(v.displacement(t), a.displacement(t));
     this.add(totalDisplacement);
+    return this;
   }
 }
 

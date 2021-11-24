@@ -57,6 +57,12 @@ class Force extends Vector {
     return fv as Force;
   }
 
+  /**
+   * The acceleration on ob1 based on the force between ob1 and ob2.
+   * @param ob1 first object.
+   * @param ob2 second object.
+   * @returns the acceleration on ob1 based on the force between ob1 and ob2.
+   */
   public static acceleration(ob1: CelestialObject, ob2: CelestialObject): Acceleration {
     // Gravitational force.
     const f = Force.gravitation(ob1, ob2);
