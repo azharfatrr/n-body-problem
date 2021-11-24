@@ -1,6 +1,6 @@
 import Vector from './Vector';
-import CelestialObject from './CelestialObject';
 import Acceleration from './Acceleration';
+import CelestialObject from './CelestialObject';
 
 /**
  * Force class.
@@ -39,7 +39,7 @@ class Force extends Vector {
   }
 
   /**
-   * Gravitational force between from m1 to m2.
+   * Gravitational force between ob1 to ob2.
    * @param ob1 first object.
    * @param ob2 second object.
    * @returns the gravitational force between the two objects.
@@ -55,21 +55,6 @@ class Force extends Vector {
     const fv = r.normalize().scalar(f);
 
     return fv as Force;
-  }
-
-  /**
-   * The acceleration on ob1 based on the force between ob1 and ob2.
-   * @param ob1 first object.
-   * @param ob2 second object.
-   * @returns the acceleration on ob1 based on the force between ob1 and ob2.
-   */
-  public static acceleration(ob1: CelestialObject, ob2: CelestialObject): Acceleration {
-    // Gravitational force.
-    const f = Force.gravitation(ob1, ob2);
-    // Acceleration.
-    const a = f.toAcceleration(ob1.mass);
-
-    return a as Acceleration;
   }
 }
 

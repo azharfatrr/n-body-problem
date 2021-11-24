@@ -39,9 +39,9 @@ class CelestialObject {
     // Calculate the acceleration from all the forces applied to the object.
     const acceleration = totalForce.toAcceleration(this.mass);
     // Change the velocity of the object by the acceleration.
-    this.velocity = this.velocity.after(acceleration, time);
+    this.velocity.after(acceleration, time);
     // Change the position of the object by the velocity and the acceleration.
-    this.position = this.position.after(this.velocity, acceleration, time);
+    this.position.after(this.velocity, acceleration, time);
 
     return this;
   }

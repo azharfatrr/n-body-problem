@@ -1,6 +1,7 @@
 import Vector from './models/Vector';
 import Force from './models/Force';
 import Position from './models/Position';
+import CelestialObject from './models/CelestialObject';
 
 console.log('Hello World');
 
